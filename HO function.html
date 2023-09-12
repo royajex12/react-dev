@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Higher order function is a function access A function as a parameter it work like a callbck function
+        //a function that accepts functions as parameters and/or returns a function.
+
+        let intervoer = (name) => {
+            if (name === "roy") {
+                return function (topic) {
+                    console.log(`hi ${name}. What is ${topic} pls explain`);
+                }
+            }
+            if (name === "ajex") {
+                return function (topic) {
+                    console.log(`hi ${name}. What is ${topic} pls explain`);
+                }
+            }
+            if (name === "shyam") {
+                return function (topic) {
+                    console.log(`hi ${name}. What is ${topic} pls explain`);
+                }
+            }
+        }
+        intervoer("shyam")("ui");
+    </script>
+</body>
+
+</html>
