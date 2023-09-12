@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var x = 1; //
+        b();
+        a();
+
+        // after excution process is complet functio b and a tha excute var x  
+
+        console.log(x);
+
+        //first priority is function it means excute a function b and than 
+
+        function b() {
+            var x = 10;
+            console.log(x);
+        }
+
+        // after complet excution process of b than excute a function a 
+
+        function a() {
+            var x = 100;
+            console.log(x);
+        }
+
+        // th last excution process is print function
+        
+        function print() {
+            var number = 50
+            var square = number * number
+            console.log(square)
+        }
+        // console.log(number);
+        print()
+        
+        // const num = 100;
+        // console.log(num);
+        // num = 200
+        // console.log(num);
+
+
+    </script>
+</body>
+
+</html>
