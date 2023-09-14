@@ -10,14 +10,47 @@
 <body>
     <script>
 
-        let user = {
-            name: "ajex",
-            age: 20,
-            address: "lucknow"
-        } // where nae , age , and address is properti of an object
-        console.log(user); 
+//         let user = {
+//             name: "ajex",
+//             age: 20,
+//             address: "lucknow"    // where name , age , and address is properti of an object
+//         }
+//         // access the onaly name or age or address than you right user.name or user.address or user.age
+//         // delete any property than write th delete user.name
+//         console.log(user);
+
+//         // delete any property than write th delete user.name
+
+//         console.log( delete user.name);
+
+//         // access the onaly name or age or address than you right user.name or user.address or user.age
+//         console.log(user.name);
+//         // let a ={
+//         //     name:"ajex",
+//         //     age:12,
+//         //     address:"ald"
+//         // }
+//         // let key = prompt("what you want" , "name")
+//         // console.log(a.key);
+
+        let obj={
+             name:"ajex",
+             age:13,
+             first_name:"ajexRoy",
+             first_email:"ajex@gmail.com"
+         }
+         let firstType = "email"
+         console.log(obj['first_'+firstType]);
 
 
+let a ={
+    name: name, 
+    address :address,
+    age: age
+}
+
+let b = a("ajex","lko",22)
+console.log(b);
     </script>
 </body>
 
