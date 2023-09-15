@@ -10,47 +10,133 @@
 <body>
     <script>
 
-//         let user = {
-//             name: "ajex",
-//             age: 20,
-//             address: "lucknow"    // where name , age , and address is properti of an object
-//         }
-//         // access the onaly name or age or address than you right user.name or user.address or user.age
-//         // delete any property than write th delete user.name
-//         console.log(user);
+        //         let user = {
+        //             name: "ajex",
+        //             age: 20,
+        //             address: "lucknow"    // where name , age , and address is properti of an object
+        //         }
+        //         // access the onaly name or age or address than you right user.name or user.address or user.age
+        //         // delete any property than write th delete user.name
+        //         console.log(user);
 
-//         // delete any property than write th delete user.name
+        //         // delete any property than write th delete user.name
 
-//         console.log( delete user.name);
+        //         console.log( delete user.name);
 
-//         // access the onaly name or age or address than you right user.name or user.address or user.age
-//         console.log(user.name);
-//         // let a ={
-//         //     name:"ajex",
-//         //     age:12,
-//         //     address:"ald"
-//         // }
-//         // let key = prompt("what you want" , "name")
-//         // console.log(a.key);
+        //         // access the onaly name or age or address than you right user.name or user.address or user.age
+        //         console.log(user.name);
+        //         // let a ={
+        //         //     name:"ajex",
+        //         //     age:12,
+        //         //     address:"ald"
+        //         // }
+        //         // let key = prompt("what you want" , "name")
+        //         // console.log(a.key);
 
-        let obj={
-             name:"ajex",
-             age:13,
-             first_name:"ajexRoy",
-             first_email:"ajex@gmail.com"
-         }
-         let firstType = "email"
-         console.log(obj['first_'+firstType]);
+        let obj = {
+            name: "ajex",
+            age: 13,
+            first_name: "ajexRoy",
+            first_email: "ajex@gmail.com"
+        }
+        let firstType = "name"
+        console.log(firstType);
+        console.log(obj['first_' + firstType]);
+
+        //property value shorthand
+
+        function a(name, address, age) {
+            return {
+                name: name,
+                address: address,
+                age: age
+            }
+
+        }
+        let b = a("ajex", "lko", 22)
+        console.log(b);
+
+        //property names limitations 
+        let obj1 = {
+            // for: "aaa",
+            // let: 2,
+            // return: "a3c"
+
+            for: 1,
+            let: 2,
+            return: 3
+
+        };
+        console.log(obj1.for + obj1.let + obj1.return);
+
+        // for in loop in object for in loop totali different from for loop
+
+        let x = {
+            name: "ajex",
+            age: 21,
+            address: "gzb"
+        }
+        for (let k in x) {
+            console.log(x[k]);
+        }
 
 
-let a ={
-    name: name, 
-    address :address,
-    age: age
-}
 
-let b = a("ajex","lko",22)
-console.log(b);
+        //         function marry(man, woman) {
+        //             woman.husband = man;
+        //             man.wife = woman;
+
+        //             return {
+        //                 father: man,
+        //                 mother: woman
+        //             }
+        //         }
+
+        //         let family = marry({
+        //             name: "John"
+        //         }, {
+        //             name: "Ann"
+        //         });
+        // console.log(family);
+
+        let user = {
+            name: "John",
+            age: 30
+        };
+        console.log(user);
+
+        // Optional chaining in object 
+
+        let user1 = {
+            name: "ajex",
+            age: 14,
+            address: "noida",
+            phone: 1234,
+            language: {
+                1: "hindi",
+                2: "english"
+            }
+
+        }
+        // console.log(user1.address.hometown.roadno); // type error Cannot read properties of undefined (reading 'roadno')
+        console.log(user1.address.hometown?.roadno);  // where '?' is working like option  
+        let user2 = [{
+            name: "ajex", age: 13, skill: "hmtl",
+            name: "alber", age: 10, skill: "java ",
+            name: "willjaik", age: 16, skill: "react"
+        }]
+
+        // console.log(user1[4].language); //type error Cannot read properties of undefined (reading 'language')
+        
+        console.log(user1[4]?.language);
+
+
+        // symbole in java script  symbole can be use a uniq value symbole can not convert to string 
+        let x1 = Symbol("hello")
+        let y1 = Symbol("hello")
+        console.log(x1 == y1); // give the false beacuase of x1 valuse is uniq and y1 value is uniqe
+
+
     </script>
 </body>
 
