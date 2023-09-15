@@ -10,28 +10,28 @@
 <body>
     <script>
 
-        //         let user = {
-        //             name: "ajex",
-        //             age: 20,
-        //             address: "lucknow"    // where name , age , and address is properti of an object
-        //         }
-        //         // access the onaly name or age or address than you right user.name or user.address or user.age
-        //         // delete any property than write th delete user.name
-        //         console.log(user);
+                // let user = {
+                //     name: "ajex",
+                //     age: 20,
+                //     address: "lucknow"    // where name , age , and address is properti of an object
+                // }
+                // access the onaly name or age or address than you right user.name or user.address or user.age
+                // delete any property than write th delete user.name
+                // console.log(user);
 
-        //         // delete any property than write th delete user.name
+                // delete any property than write th delete user.name
 
-        //         console.log( delete user.name);
+                // console.log( delete user.name);
 
-        //         // access the onaly name or age or address than you right user.name or user.address or user.age
-        //         console.log(user.name);
-        //         // let a ={
-        //         //     name:"ajex",
-        //         //     age:12,
-        //         //     address:"ald"
-        //         // }
-        //         // let key = prompt("what you want" , "name")
-        //         // console.log(a.key);
+                // access the onaly name or age or address than you right user.name or user.address or user.age
+                // console.log(user.name);
+                // let a ={
+                //     name:"ajex",
+                //     age:12,
+                //     address:"ald"
+                // }
+                // let key = prompt("what you want" , "name")
+                // console.log(a.key);
 
         let obj = {
             name: "ajex",
@@ -119,7 +119,8 @@
 
         }
         // console.log(user1.address.hometown.roadno); // type error Cannot read properties of undefined (reading 'roadno')
-        console.log(user1.address.hometown?.roadno);  // where '?' is working like option  
+        // console.log(user1.address.hometown?.roadno);  // where '?' is working like option  
+
         let user2 = [{
             name: "ajex", age: 13, skill: "hmtl",
             name: "alber", age: 10, skill: "java ",
@@ -127,14 +128,33 @@
         }]
 
         // console.log(user1[4].language); //type error Cannot read properties of undefined (reading 'language')
-        
-        console.log(user1[4]?.language);
+
+        // console.log(user1[4]?.language);
 
 
         // symbole in java script  symbole can be use a uniq value symbole can not convert to string 
         let x1 = Symbol("hello")
         let y1 = Symbol("hello")
         console.log(x1 == y1); // give the false beacuase of x1 valuse is uniq and y1 value is uniqe
+        let email1 = Symbol();
+        let user3={
+            name:"jacson",
+            age:21,
+            // [email1]=(ajex@gmail.com) 
+        }
+        user3[email1]=("ajex@gmail.com")
+        console.log(    );
+        console.log(user3[email1]);
+
+        for(let key in user3)  // in for in loop case it can skip symbole
+        {
+            console.log(user3[key]);
+        }
+
+        console.log(JSON.stringify(user3)); // it also skip symbole "JSON.stringfy"=> means it convert oject to jason formate
+
+
+
 
 
     </script>
