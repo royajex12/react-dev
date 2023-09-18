@@ -112,13 +112,40 @@
         console.log(reverse.reverse());
 
         //split and join 
-        let split = "hello i m ajexroy"
-        let split1 = split.split(" ")
-        console.log((split1))
+
+        let split = "hello i& m& ajexroy".split('&',1)
+        // let split1 = split 
+        console.log((split))
         
         let sort = [1,2,0,56,41];
         sort.sort();
         console.log(sort);
+
+        // MAP method use
+
+        const map = [1, 4, 7, 8, 3, 5]
+        const out = map.map(
+            (x) => {
+                return x * 2;
+            }
+        )
+
+        console.log(out);
+        console.log(map);
+
+        // filter method use in array
+        let fil = [2,7,4,7,3,52,44]
+        let filter = fil.filter((even)=>{
+            return even%2
+        })
+        console.log(filter);
+
+        let fil1 = [22,55,44,324,2,90]
+        let fil2 = fil1.filter((odd)=>{
+           return odd%2 ===0 ;
+        })
+        console.log(fil2);
+
     </script>
 </body>
 
