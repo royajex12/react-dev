@@ -44,13 +44,13 @@
         }
         for (let b in bank)   // in for loop print the position of string
         {
-            console.log(b );
+            console.log(b);
             console.log(bank[b]);
         }
 
         // Accessing characters
 
-        let bank1=["sbi" , "boi" , "bob" ]
+        let bank1 = ["sbi", "boi", "bob"]
         for (let b of bank1)    // print the value of strin
         {
             console.log(b);
@@ -61,7 +61,34 @@
         // searching for a substring .indexOf 
 
         let str1 = 'Widget with id'
-       console.log(str1.indexOf(" id")); 
+        console.log(str1.indexOf(" id")); // Print Position id = 11
+        console.log(str1.indexOf("id"));  //Print position id = 1 
+        //    console.log(str1.);
+
+
+        let str2 = 'As sly as a fox, as strong as an ox';
+
+        let target = 'as'; // let's look for it
+
+        let pos = 0;
+        while (true) {
+            let foundPos = str2.indexOf(target, pos);
+            if (foundPos == -1) break;
+
+            console.log(`Found at ${foundPos}`);
+            pos = foundPos + 1; // continue the search from the next position
+        }
+
+        // the .includes methos check given word are available in string
+        console.log(str2.includes('sky'));  // give false
+        console.log(str2.includes('sly'));  // give true
+
+        // the .startWith method check string start with 
+        console.log(str2.startsWith("As") );  //give true
+        console.log(str2.startsWith("as") );  //give false or other 
+        console.log(str2.endsWith("ox") );  //give true
+        console.log(str2.endsWith("Ox") );  //give false
+
 
     </script>
 </body>

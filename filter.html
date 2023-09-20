@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        let a = [2,7,4,7,3,52,44]
-        let filter = a.filter((even)=>{
-            return even%2
+        let a = [2, 7, 4, 7, 3, 52, 44]
+        let filter = a.filter((even) => {
+            return even % 2
         })
         console.log(filter);
 
-        let b = [22,55,44,324,2,90]
-        let x = b.filter((odd)=>{
-           return odd%2 ===0 ;
+        let b = [22, 55, 44, 324, 2, 90]
+        let x = b.filter((odd) => {
+            return odd % 2 === 0;
         })
         console.log(x);
+
+        let arr = [1, 2, 3, 4, 5];
+
+        let result = arr.reduce((sum, current) => sum + current);
+
+        console.log(result); // 15
     </script>
 </body>
+
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let m = new Map();
+        m.set(1, "ajex")
+        console.log(m);
+        console.log(typeof (m));
+
+
+        const fruits = new Map([
+            ["apples", 500],
+            ["bananas", 300],
+            ["oranges", 200]
+        ]);
+        console.log(fruits);
+
+
+
+        let student = new Map()
+        student.set(1, "Ajex")  // key =1 and valuse is Ajex
+        student.set(2, "Robin")
+        student.set(3, "Jaik")
+        console.log(student.get(3)); // print value of given key  o/p is Jaik
+
+        let stu = new Map()
+        stu.set(1, "Ajex")  // key =1 and valuse is Ajex
+        stu.set(2, "Robin")
+        stu.set(3, "Jaik")
+
+        stu.forEach((value,key)=>{
+            console.log(`${key}:${value}`); // print key and value 1:Ajex etc
+        }) 
+
+        for (let c of stu.keys()) {
+            console.log(c);  // print key of stu
+        }
+        for (let value of stu.values()) {
+            console.log(value);  // print value of stu 
+        }
+
+        for (let enti of stu.entries()) {
+            console.log(enti);
+
+        }
+
+        let user2 = [{
+            name: "ajex", age: 13, skill: "hmtl",
+            name: "alber", age: 10, skill: "java ",
+            name: "willjaik", age: 16, skill: "react"
+        }]
+
+
+
+    </script>
+</body>
+
+</html>
