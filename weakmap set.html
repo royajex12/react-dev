@@ -26,7 +26,21 @@
 
         /* new promise start */
 
-       
+
+        /* promise2 start */
+
+        let promise2 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                // resolve(["ajex"])  // print [ajex]
+                resolve({ name: "ajex", age: 12, addrss: "lko" })
+
+            }, 3000)
+        })
+        promise2.then((user) => {
+            console.log(user);
+        })
+
+        /* promise2 end */
 
 
 
