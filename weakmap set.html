@@ -42,7 +42,36 @@
 
         /* promise2 end */
 
+        /* promise3 start */
 
+        const promise3 = new Promise((resolve, reject) => {
+            let error = false
+            if (!error) {
+                resolve([{ name: "Jaik", age: 17, addrss: "ald" },
+                { name: "Jaik", age: 17, addrss: "ald" },
+                { name: "Jaik", age: 17, addrss: "ald" }
+                ])
+            }
+            else {
+                reject("page 404 not fiund")
+            }
+        })
+
+        const promise4 = new Promise((resolve, reject) => {
+            return resolve("hello")
+        })
+
+        promise3.then((uss) => {
+            console.log(uss);
+            return promise4;
+        }).then((p4) => {
+            console.log(p4);
+        })
+            .catch((error) => {
+                console.log(error);
+            })
+
+        /* promise3 end */
 
 
     </script>
