@@ -8,7 +8,23 @@
 </head>
 
 <body>
-    
+    <script>
+        const promis1 = new Promise((resolve, reject) => {
+            setTimeout(function () {
+                console.log("Async task complet");
+            }, 2000)
+            resolve()  // yahase connect kr raha .than connect ot resolve
+        })
+        /* .than => direct connection on resolve .than ke andar ek 
+        function hota jisake sath aap kuch bhi kr akate hai than ke and jo 
+        function hai vo return value ko print karega */
+
+        promis1.then(function () {
+            console.log("promice consumed");
+        })
+
+
+    </script>
 </body>
 
 </html>
