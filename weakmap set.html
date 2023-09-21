@@ -9,10 +9,11 @@
 
 <body>
     <script>
+
         const promis1 = new Promise((resolve, reject) => {
             setTimeout(function () {
                 console.log("Async task complet");
-            }, 2000)
+            }, 1000)
             resolve()  // yahase connect kr raha .than connect ot resolve
         })
         /* .than => direct connection on resolve .than ke andar ek 
@@ -22,6 +23,12 @@
         promis1.then(function () {
             console.log("promice consumed");
         })
+
+        /* new promise start */
+
+       
+
+
 
 
     </script>
