@@ -51,7 +51,15 @@
         })
         console.log(d);
 
-
+        // program 5 
+        let filter5 =[{name:"ajex ",age :13 ,language:"hindi ",skill:"java",address:"lko"},
+        {name:"ajex ",age :19 ,language:"English",skill:"python",address:"gzb"},
+        {name:"ajex ",age :20 ,language:"Urdu",skill:"c++",address:"ald"},
+        {name:"ajex ",age :10 ,language:"bhojpuri",skill:"html",address:"ald"}]
+        let e = filter5.filter((user)=>{
+            return user.age>=20 && user.address==="ald"
+        })
+        console.log(e);
 
     </script>
 </body>
