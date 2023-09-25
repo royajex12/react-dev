@@ -26,15 +26,18 @@
         })
         console.log(b);
 
-        
+        // program 3
 
-
-
-
-
-
-
-
+        let filter3 = [{ name: "Ajex", age: 12, address: "lko" },
+        { name: "Albert", age: 18, address: "ald" },
+        { name: "Jaik", age: 8, address: "gzb" },]
+        let c = filter3.filter((age) => {
+            return age.address ==="gzb"
+        })
+        .map((address) => {
+           return address.age>=8
+        })
+        console.log(c);
 
     </script>
 </body>
