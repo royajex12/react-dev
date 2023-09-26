@@ -9,27 +9,75 @@
 
 <body>
     <script>
+
+
         function a() {
             setTimeout(() => {
                 console.log("hari");
+                function b() {
+                    
+                    setTimeout(() => {
+                        console.log("ram");
+                        function c() {
+                        
+                            setTimeout(() => {
+                                console.log("mohan");
+                            }, 8000  )
+                            
+                        }
+                    }, 2000);
+                }
             }, 10000)
-        }
-        function b() {
-            setTimeout(() => {
-                console.log("Ram");
-            }, 1000)
-        }
-        function c() {
-            setTimeout(() => {
-                console.log("shyam");
-            }, 8000)
-        }
-        a();
-        b();
-        c();
+        }a()
+       
 
 
-        
+        // let x = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         console.log("hari");
+        //         resolve()
+
+        //     }, 10000)
+        // })
+        // let y = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         console.log("Ram");
+        //         resolve()
+        //     }, 1000)
+        // })
+        // let z = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         console.log("shyam");
+        //     }, 8000)
+        //     resolve()
+        // })
+
+        // x.then(() => {
+
+        // })
+        // y.then(()=>{
+
+        // }) 
+        // z.then(()=>{
+
+        // })
+
+
+        function compute(action, x, y) {
+            if (action === "divide") {
+                return x / y
+            } else if (action === "multiply") {
+                return x * y
+            } else if (action === "add") {
+                return x + y
+            } else if (action === "modulus") {
+                return x % y
+            }
+        }
+
+
+
+
     </script>
 </body>
 
