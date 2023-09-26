@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>map</title>
 </head>
+
 <body>
     <script>
-        let map1=[1,2,3,4,5,7,12,0.5]
-        let a = map1.map((num)=>{
-            return num*10
-        }).map((num1)=>{
-            return num1>10
+        let map1 = [1, 2, 3, 4, 5, 7, 12, 0.5]
+        let a = map1.map((num) => {
+            return num * 10
         })
+            .map((num) => {
+                return num + 1
+            })
+            // .filter((num)=>{
+            //     return num<10
+            // })
+            .map((num) => {
+                return num = num >= 10
+            })
         console.log(a);
-        
+
+        // Program 2 
+        let map2 = [{ name: "Ajex ", age: 13, language: "hindi ", skill: "java", address: "lko" },
+        { name: "Jaik ", age: 19, language: "English", skill: "python", address: "gzb" },
+        { name: "Optimus ", age: 20, language: "Urdu", skill: "c++", address: "ald" },
+        { name: "Albert", age: 10, language: "bhojpuri", skill: "html", address: "ald" }]
+        let b =map2.map((user)=>{
+            return  user.name
+        })
+        console.log(b);
+        // console.log(map2);
+
+
+
+
+
+
+
+
     </script>
 </body>
+
 </html>

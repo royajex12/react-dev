@@ -31,11 +31,11 @@
         let filter3 = [{ name: "Ajex", age: 12, address: "lko" },
         { name: "Albert", age: 18, address: "ald" },
         { name: "Jaik", age: 8, address: "gzb" },]
-        let c = filter3.filter((age) => {
-            return age.address ==="gzb"
+        let c = filter3.filter((user) => {
+            return user.address ==="gzb"
         })
-        .map((address) => {
-           return address.age>=8
+        .map((user) => {
+           return user.age>=8
         })
         console.log(c);
 
@@ -62,13 +62,17 @@
         console.log(e);
 
         // program 6 
-        let filter6="hello i am ajex roy"
-        let f = filter6.filter((str)=>{
-            return 
+        let filter6 = [{ name: "Ajex", age: 12, address: "lko" },
+        { name: "Albert", age: 18, address: "ald" },
+        { name: "Jaik", age: 8, address: "gzb" },]
+        let f = filter6.filter((user) => {
+            return user.address ==="gzb"
         })
-        console.log(f);
+        .map((user) => {
+           return user.age=19
+        })
+        console.log(c);
         console.log(filter6);
-
 
     </script>
 </body>
