@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promise</title>
 </head>
+
 <body>
-   <script>
-    // program 1
-    const Promise1=new Promise((resolve,reject)=>{
-        resolve()
-    })
-    Promise1.then(()=>{
-        console.log("promise consumed by the promise1");
-    })
-    
+    <script>
+        // program 1
+        const Promise1 = new Promise((resolve, reject) => {
+            resolve()
+        })
+        Promise1.then(() => {
+            console.log("promise consumed by the promise1");
+        })
+
+        //program 2
+        let promise2 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("promis 2 ");
+                resolve("pass the value through resolve")
+            }, 1000)
+        })
+            .then((mess) => {
+                console.log(mess);
+            })
 
 
-   </script> 
+
+
+    </script>
 </body>
+
 </html>
