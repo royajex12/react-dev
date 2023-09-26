@@ -28,6 +28,16 @@
                 console.log(mess);
             })
 
+        //program 3 
+        const promise3=new Promise((resolve, reject) => {
+            setTimeout(() => {
+               resolve({name:"Ajex",age:12,address:"lko"}) 
+            }, 5000);
+        })
+        .then((user)=>{
+            console.log(user);
+        })
+
 
 
 
