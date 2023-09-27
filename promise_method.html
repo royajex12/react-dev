@@ -9,34 +9,83 @@
 
 <body>
     <script>
-        // program 1
-        const Promise1 = new Promise((resolve, reject) => {
-            resolve()
-        })
-        Promise1.then(() => {
-            console.log("promise consumed by the promise1");
-        })
+        // // program 1
+        // const Promise1 = new Promise((resolve, reject) => {
+        //     resolve()
+        // })
+        // Promise1.then(() => {
+        //     console.log("promise consumed by the promise1");
+        // })
 
-        //program 2
-        let promise2 = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                console.log("promis 2 ");
-                resolve("pass the value through resolve")
-            }, 1000)
+        // //program 2
+        // let promise2 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         console.log("promis 2 ");
+        //         resolve("pass the value through resolve")
+        //     }, 1000)
+        // })
+        //     .then((mess) => {
+        //         console.log(mess);
+        //     })
+
+        // //program 3 
+        // const promise3 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve({ name: "Ajex", age: 12, address: "lko" })
+        //     }, 5000);
+        // })
+        //     .then((user) => {
+        //         console.log(user);
+        //     })
+
+        // program 4 
+        function promise4(complet) {
+            return new Promise((resolve, reject) => {
+                console.log("somthing loading");
+                setTimeout(() => {
+                    if (complet) {
+                        resolve("problem resolve")
+                    }
+                    else {
+                        reject("can't solve the problemm")
+                    }
+                }, 1000);
+            })
+        }
+        promise4(false).then((reselt) => {
+            console.log(reselt);
         })
-            .then((mess) => {
-                console.log(mess);
+            .catch((error) => {
+                console.log(error);
             })
 
-        //program 3 
-        const promise3=new Promise((resolve, reject) => {
-            setTimeout(() => {
-               resolve({name:"Ajex",age:12,address:"lko"}) 
-            }, 5000);
-        })
-        .then((user)=>{
-            console.log(user);
-        })
+
+            
+        new Promise(function (resolve, reject) {
+
+            setTimeout(() => resolve(1), 1000);
+
+        }).then(function (result) {
+
+            alert(result); // 1
+
+            return new Promise((resolve, reject) => { // (*)
+                setTimeout(() => resolve(result * 2), 1000);
+            });
+
+        }).then(function (result) { // (**)
+
+            alert(result); // 2
+
+            return new Promise((resolve, reject) => {
+                setTimeout(() => resolve(result * 2), 1000);
+            });
+
+        }).then(function (result) {
+
+            alert(result); // 4
+
+        });
 
 
 
