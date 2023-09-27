@@ -9,20 +9,20 @@
 
 <body>
     <script>
-        // let a = {
-        //     name: "ajex",
-        //     age: 22,
-        //     address: "lko",
-        //     aa:()=>{
-        //         console.log("heee");
-        //     },
-        //     say:()=>{
-        //         console.log("my age is"+a.age);
-        //     }
-        // }
-        
-      
-        
+        // // let a = {
+        // //     name: "ajex",
+        // //     age: 22,
+        // //     address: "lko",
+        // //     aa:()=>{
+        // //         console.log("heee");
+        // //     },
+        // //     say:()=>{
+        // //         console.log("my age is"+a.age);
+        // //     }
+        // // }
+
+
+
         // program 1
         const Promise1 = new Promise((resolve, reject) => {
             resolve()
@@ -88,7 +88,7 @@
                     resolve(result + 1)
 
                 })
-            }, 3000);
+            }, 1000);
         })
             .then((result) => {
                 console.log(result);
@@ -97,14 +97,15 @@
 
         // program 6 
 
-        let arr = { name: "ajex", age: 12, address: "lko" }
 
         let promis6 = new Promise((resolve, reject) => {
-            if (arr.age = 12) {
-                resolve(arrr)
+            let arr = { name: "ajex", age: 12, address: "lko" }
+            if (arr.age >19) {
+                // console.log(arr);   
+                resolve(arr)
             }
             else {
-                reject = console.error("promiswe 6 reject");
+                reject  ("promiswe 6 reject");
             }
         })
         promis6.then((res) => {
