@@ -9,34 +9,48 @@
 
 <body>
     <script>
-        // // program 1
-        // const Promise1 = new Promise((resolve, reject) => {
-        //     resolve()
-        // })
-        // Promise1.then(() => {
-        //     console.log("promise consumed by the promise1");
-        // })
+        // let a = {
+        //     name: "ajex",
+        //     age: 22,
+        //     address: "lko",
+        //     aa:()=>{
+        //         console.log("heee");
+        //     },
+        //     say:()=>{
+        //         console.log("my age is"+a.age);
+        //     }
+        // }
+        
+      
+        
+        // program 1
+        const Promise1 = new Promise((resolve, reject) => {
+            resolve()
+        })
+        Promise1.then(() => {
+            console.log("promise consumed by the promise1");
+        })
 
-        // //program 2
-        // let promise2 = new Promise((resolve, reject) => {
-        //     setTimeout(() => {
-        //         console.log("promis 2 ");
-        //         resolve("pass the value through resolve")
-        //     }, 1000)
-        // })
-        //     .then((mess) => {
-        //         console.log(mess);
-        //     })
+        //program 2
+        let promise2 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("promis 2 ");
+                resolve("pass the value through resolve")
+            }, 1000)
+        })
+            .then((mess) => {
+                console.log(mess);
+            })
 
-        // //program 3 
-        // const promise3 = new Promise((resolve, reject) => {
-        //     setTimeout(() => {
-        //         resolve({ name: "Ajex", age: 12, address: "lko" })
-        //     }, 5000);
-        // })
-        //     .then((user) => {
-        //         console.log(user);
-        //     })
+        //program 3 
+        const promise3 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve({ name: "Ajex", age: 12, address: "lko" })
+            }, 5000);
+        })
+            .then((user) => {
+                console.log(user);
+            })
 
         // program 4 
         function promise4(complet) {
@@ -76,9 +90,29 @@
                 })
             }, 3000);
         })
-        .then((result) => {
+            .then((result) => {
                 console.log(result);
             })
+
+
+        // program 6 
+
+        let arr = { name: "ajex", age: 12, address: "lko" }
+
+        let promis6 = new Promise((resolve, reject) => {
+            if (arr.age = 12) {
+                resolve(arrr)
+            }
+            else {
+                reject = console.error("promiswe 6 reject");
+            }
+        })
+        promis6.then((res) => {
+            console.log(res);
+        }).catch((err) => {
+            console.log(err);
+        })
+
     </script>
 </body>
 
