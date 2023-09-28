@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>object </title>
 </head>
+
 <body>
     <script>
+        // program 1
+
+        let obj1 = {
+            firstName: "Optimus",
+            lastName: "Prime",
+            age: 12,
+            address: "Lko",
+            fullname:function(){
+                return (this.firstName+" " +this.lastName)
+            }
+        }
+        
+        console.log(obj1.fullname());
+
+        // program 2
+
+        function getRandom(min, max) {
+            let x = Math.floor(Math.random() * (max - min + 1)) + min;
+            return x;
+        }
+        console.log(getRandom(10, 20))
+
         
     </script>
 </body>
+
 </html>
