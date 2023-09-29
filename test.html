@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,9 +9,79 @@
 
 <body>
     <script>
-       
+        // const obj =  [a=1,b=2,c=3]
+        // obj.b=7
+        // console.log(obj)
+
+        // const obj1 = {a:1,b:2,c:3}
+        // obj1.b = 5
+        // console.log(obj1)
+
+        let a = {
+            name: "ajex"
+        }
+        // let  b={
+        //     name:"ajex"
+        // }
+        // let  c={
+        //     name:"ajex"
+        // }
+        let c = Object.assign({}, a)
+        console.log(c.name);
+
+        // nested cloaning 
+        let obj3 = {
+            name: "ajex",
+            size: {
+                hight: 12, width: 122
+            }
+        }
+        console.log(obj3.size.hight);
+        let clone1 = Object.assign({}, obj3)
+        console.log(obj3.size.hight = 14);
+        console.log(obj3.size == clone1.size);
+        console.log(clone1.size.hight);
+
+        let obj4 = {
+            name: "ajex",
+            size: {
+                hight: 12, width: 122
+            }
+        }
+        let clone2 = structuredClone(obj4)
+        console.log();
+
+        let obj5 = {
+            name: "ajx"
+        }
+        let x = obj5
+        obj5 = null
+        console.log(obj5);
+        //Example - 3 ...Interlinked 
+        function marry(man, woman) {
+            woman.husband = man;
+            man.wife = woman;
+            return {
+                father: man,
+                mother: woman
+            }
+        }
+
+        let family = marry(
+            {
+                name: "Sachin"
+            },
+            {
+                name: "KatrinaKaif"
+            }
+        );
+
+        delete family.father;
+        delete family.mother.husband;
+
+        //Which object is eligible for garbage collection now? 
     </script>
 
 </body>
 
-</html>
+</html> -->

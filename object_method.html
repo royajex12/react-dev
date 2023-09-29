@@ -16,11 +16,11 @@
             lastName: "Prime",
             age: 12,
             address: "Lko",
-            fullname:function(){
-                return (this.firstName+" " +this.lastName)
+            fullname: function () {
+                return (this.firstName + " " + this.lastName)
             }
         }
-        
+
         console.log(obj1.fullname());
 
         // program 2
@@ -31,7 +31,43 @@
         }
         console.log(getRandom(10, 20))
 
-        
+        //program 3
+
+        let name = function (address) {
+            console.log(this.firstName + " " + this.lastName + " " + address);
+        }
+
+        let user = {
+            firstName: "Ajex",
+            lastName: "Roy",
+            age: 12
+        }
+        let user1 = {
+            firstName: "Jaick",
+            lastName: "Roy",
+            age: 12
+        }
+        name.apply(user1, ["lko", "india "])
+        name.call(user, "lko", "lko")
+        let r = name.bind(user, "lko")
+        r()
+        // program 4
+        let obj2 = {
+            firstName: "Albert",
+            lastName: "hip",
+            age: 12,
+            fullname: function (address) {
+                return (this.firstName + " " + this.lastName + " " + address)
+            }
+        }
+        let obj3 = {
+            firstName: "Jaik",
+            lastName: "Roy",
+            age: 12
+        }
+       
+        let x = obj2.fullname.bind(obj3, "gzb")
+        console.log([x(), obj2.fullname.call(obj3)]);
     </script>
 </body>
 
