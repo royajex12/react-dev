@@ -1,13 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Object</title>
 </head>
+
 <body>
     <script>
+        let message = "Hello";
+        let phrase = message;
+
+        let user = {
+            name: "John"
+        };
+
+        let admin = user;  //copy the reference
+        user.name = "ajex"
+        admin.name = "Rohit";
+        console.log(admin.name);
+        //properties of objects are free to change
+        console.log((admin === user), (admin == user));
+
+
+        let a = {};
+        let b = {};
+        console.log(a == b);  //false
+
+        // Example-1 ...by using for-in
+        let user1 = {
+            name: "jaik",
+            age: 12
+        }
+        let clone1 = {}
+        for (let key in user1) {
+            clone1[key] == user1[key]
+        }
+        clone1.name = "caption"  //changed the name property of clone object
+        console.log(user1 === clone1);
+        console.log(clone1);
+
+        // Object.assign method
+
+        let user2 = {
+            name: "optimus"
+        };
+        let x1 = {
+            age: 32
+        };
+        let x2 = {
+            address: "lko"
+        };
+        // copy all property in object x1 and x2 and store in object user2
+        Object.assign(user2, x1, x2);
+        console.log(user2);
+
+        // Property clash - Override
+        let user3 = {
+            name: "Sachin"
+        };
+        Object.assign(user3, { name: "Shyam" });
+        console.log(user3.name); //print shyam 
+
+        //Simple Object Cloning
+        let user4 = {
+            name: "Ram",
+            age: 20
+        };
+
+        let clone3 = Object.assign({}, user4);
+        console.log(clone3.name); //print Ram
+        console.log(clone3.age); //20
+
+        //Nested Cloning
+        let user5 = {
+            name: "albert",
+            address: {
+                countery: "india",
+                state: "uttar pradesh"
+            }
+        };
+        console.log(user5.address.state); //print uttar prasesh
+
+        let clone4 = Object.assign({}, user5)
+
+        user5.address.state = "madhya pradesh"
+
+        console.log(clone4);
+        console.log(clone4.address.state); //print madhya pradesh 
+
+        user5.name = "jackson"
+        console.log(clone4.name);  // print albert
+
+
+        function marry(man, woman) {
+            woman.husband = man;
+            man.wife = woman;
+
+            return {
+                father: man,
+                mother: woman,
+            }
+        }
+
+        let family = marry(
+            {
+                name: "John"
+            },
+            {
+                name: "Ann"
+            });
+        console.log(family);
         
     </script>
 </body>
+
 </html>
