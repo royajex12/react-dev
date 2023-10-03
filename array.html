@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <script>
+        let ar1=["ajex",12,"lko"]
+        console.log(ar1[1]); //Array elements are numbered, starting with zero. o/p=12
+        ar1[1]="jaik"
+        console.log(ar1[1]); // o/p = jaik
+        console.log(ar1.length); // gieve the lenght o ar1 = 3
+        console.log(ar1.length -1); // gieve the lenght o ar1 = 2
+        console.log(ar1[ar1.length -1]); // gieve the lenght o ar1 = lko
+        console.log(ar1.at(-1)); // gieve the lenght o ar1 = lko
+       
+        let arr2=["ajex",{name:"jaik",age:12},"bike",{name:"ramu",age:12}]
+        console.log(arr2[1].name);  // o/p jaik
+        console.log(arr2[3].name);  // o/p ramu
+
+        let arr3 =[{name:"ajex",age:12}]
+        let arr4 =[{name:"jaik",age:12}]
+        arr3.push(arr4) // it can push the value at the end
+        console.log(arr3);
+        arr3.pop(arr4)
+        console.log(arr3);
+        
+
+    </script>
+</body>
+</html>
