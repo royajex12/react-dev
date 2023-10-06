@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<ul>
+    <li class="cl pi">list 1</li>
+    <li class="cl ">list 1</li>
+    <li class="secondcl ">list 2</li>
+</ul>
+    <script>
+
+        // let element = document.getElementsByClassName("cl pi")
+        // // let element = document.getElementsByClassName("pi")
+        // console.log(element.length);
+        // for (let i = 0; i < element.length; i++) {
+        //     element[i].innerHTML="<p> hello elemnt </p>"
+
+        // }
+        
+        // function greet(name) {
+        //     console.log(`Hello, ${name}!`);
+        // }
+        // const person = { name: "Alice" };
+        // const greetBob = greet.bind(person, "Bob");
+        // greetBob();
+        // function greet(name) {
+        //     console.log(`Hello, ${name}!`);
+        // }
+        // const person = { name: "Alice" };
+        // greet.call(person, "Bob");
+
+        // const person1 = { name: "Alice" };
+        // const person2 = { ...person1 };
+        // person2.name = "Bob";
+        // console.log(person1.name);
+        // const words = ["hello", "world", "javascript"];
+        // const lengths = words.map(word => word.length);
+        // console.log(lengths);
+
+        // const persons = [
+        //     { name: "Alice", age: 22 },
+        //     { name: "Bob", age: 17 },
+        //     { name: "Charlie", age: 25 },
+        //     { name: "David", age: 16 },
+        // ];
+        // let x = persons.filter((a) => {
+        //     return a.age > 18
+        // })
+        // console.log(x);
+
+        // const products = [
+        //     { id: 1, name: "Apple", price: 1.0 },
+        //     { id: 2, name: "Banana", price: 0.5 },
+        //     { id: 3, name: "Cherry", price: 2.0 },
+        // ];
+        // let y = products.map((ar) => {
+        //     return ar.name
+        // })
+        // console.log(y);
+
+        // let z = { id: 1, name: "John" }
+        // let pr = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         console.log(z);
+        //     }, 2000);
+        //     resolve()
+        // })
+        // pr.then(() => {
+        //     console.log();
+        // })
+        // const myPromise = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Promise resolved!");
+        //     }, 1000);
+        // });
+        // console.log(myPromise);
+
+        // let prr = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         console.log("helo");
+        //     }, 2000);
+        // })
+        // prr.then()
+
+        function count(){
+            let a = 0
+            function ince(){
+                a++
+                return a
+            }
+            return ince
+        }
+        let out = count()
+        console.log(out());
+        console.log(out());
+        console.log(out());
+
+    </script>
+</body>
+
+</html>

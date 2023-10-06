@@ -1,33 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>array</title>
 </head>
+
 <body>
     <script>
-        let ar1=["ajex",12,"lko"]
+        let ar1 = ["ajex", 12, "lko"]
         console.log(ar1[1]); //Array elements are numbered, starting with zero. o/p=12
-        ar1[1]="jaik"
+        ar1[1] = "jaik"
         console.log(ar1[1]); // o/p = jaik
         console.log(ar1.length); // gieve the lenght o ar1 = 3
-        console.log(ar1.length -1); // gieve the lenght o ar1 = 2
-        console.log(ar1[ar1.length -1]); // gieve the lenght o ar1 = lko
+        console.log(ar1.length - 1); // gieve the lenght o ar1 = 2
+        console.log(ar1[ar1.length - 1]); // gieve the lenght o ar1 = lko
         console.log(ar1.at(-1)); // gieve the lenght o ar1 = lko
-       
-        let arr2=["ajex",{name:"jaik",age:12},"bike",{name:"ramu",age:12}]
+
+        let arr2 = ["ajex", { name: "jaik", age: 12 }, "bike", { name: "ramu", age: 12 }]
         console.log(arr2[1].name);  // o/p jaik
         console.log(arr2[3].name);  // o/p ramu
 
-        let arr3 =[{name:"ajex",age:12}]
-        let arr4 =[{name:"jaik",age:12}]
+        let arr3 = [{ name: "ajex", age: 12 }]
+        let arr4 = [{ name: "jaik", age: 12 }]
         arr3.push(arr4) // it can push the value at the end
         console.log(arr3);
         arr3.pop(arr4)
         console.log(arr3);
-        
 
+        let arr5 = [[1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+        ]
+        console.log(arr5);
+
+        console.log([] + 1); // o/p "1"
+        console.log([1] + 1); //11 
+        console.log([1, 2] + [1, 3]); //1,21,3
+        console.log([1] + [1, 2]); // 11 , 2
+
+        let arr6 = [{ id: 1, name: "John" },
+        { id: 2, name: "Pete" },
+        { id: 3, name: "Mary" }
+        ]
+        let us = arr6.find((ar) => {
+            return ar.id == 1
+        })
+        console.log(us);
+        let us1 = arr6.findIndex((ari) => {
+            return ari.name == "Pete"
+        })
+        console.log(us1);
+        let us3 = arr6.filter((fli) => {
+            return fli.name == "Pete"
+        })
+        console.log(us3);
+
+        let arr7 = [1, 2, 7, 1, 23, 0, -1]
+        arr7.sort((a, b) => {
+            return a - b
+        })
+        console.log(arr7);
+
+        let arr8 = [1, 3, 1, 2, 8, 9, 0, -12]
+
+        arr8.reverse()
+        console.log(arr8);
+
+        let arr9 = ["I", "study", "JavaScript", "right", "now"]
+        let r = arr9.splice(0, 2) // remove i study
+        console.log(arr9); // print "JavaScript", "right", "now"
+        arr9.splice(2, 0, "complex", "language"); // ADD the index of 2  "complex", "language"
+        console.log(arr9); // print "JavaScript","complex", "language","right", "now"
+
+        let arr10 = [1, 3,13]
+        // let x = arr10.slice(1, 3)
+        // console.log(x); // print 3,2
+        arr10.splice(-1,0 ,5,7,9,);
+        console.log(arr10); // -1 represent the index and 0 represent the delete element and 5,7,9, added 
+        
     </script>
 </body>
+
 </html>

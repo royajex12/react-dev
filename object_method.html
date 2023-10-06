@@ -9,65 +9,87 @@
 
 <body>
     <script>
-        // program 1
+        // // program 1
 
-        let obj1 = {
-            firstName: "Optimus",
-            lastName: "Prime",
-            age: 12,
-            address: "Lko",
-            fullname: function () {
-                return (this.firstName + " " + this.lastName)
-            }
-        }
+        // let obj1 = {
+        //     firstName: "Optimus",
+        //     lastName: "Prime",
+        //     age: 12,
+        //     address: "Lko",
+        //     fullname: function () {
+        //         return (this.firstName + " " + this.lastName)
+        //     }
+        // }
 
-        console.log(obj1.fullname());
+        // console.log(obj1.fullname());
 
-        // program 2
+        // // program 2
 
-        function getRandom(min, max) {
-            let x = Math.floor(Math.random() * (max - min + 1)) + min;
-            return x;
-        }
-        console.log(getRandom(10, 20))
+        // function getRandom(min, max) {
+        //     let x = Math.floor(Math.random() * (max - min + 1)) + min;
+        //     return x;
+        // }
+        // console.log(getRandom(10, 20))
 
-        //program 3
+        // //program 3
 
-        let name = function (address,countery) {
-            console.log(this.firstName + this.lastName + " from:" + address+" and my countery is :" +countery+" my age is"+this.age);
-        }
+        // let name = function (address,countery) {
+        //     console.log(this.firstName + this.lastName + " from:" + address+" and my countery is :" +countery+" my age is"+this.age);
+        // }
 
-        let user = {
-            firstName: "Ajex",
-            lastName: "Roy",
-            age: 12
-        }
-        let user1 = {
-            firstName: "Jaick",
-            lastName: "Roy",
-            age: 12
-        }
-        name.apply(user1, ["lko", "india "])
-        name.call(user, "lko", "japan")
-        let r = name.bind(user, "lko")
-        r()
-        // program 4
-        let obj2 = {
-            firstName: "Albert",
-            lastName: "hip",
-            age: 12,
-            fullname: function (address) {
-                return (this.firstName + " " + this.lastName + " " + address)
-            }
-        }
-        let obj3 = {
-            firstName: "Jaik",
-            lastName: "Roy",
-            age: 12
-        }
+        // let user = {
+        //     firstName: "Ajex",
+        //     lastName: "Roy",
+        //     age: 12
+        // }
+        // let user1 = {
+        //     firstName: "Jaick",
+        //     lastName: "Roy",
+        //     age: 12
+        // }
+        // name.apply(user1, ["lko", "india "])
+        // name.call(user, "lko", "japan")
+        // let r = name.bind(user, "lko")
+        // r()
+        // // program 4
+        // let obj2 = {
+        //     firstName: "Albert",
+        //     lastName: "hip",
+        //     age: 12,
+        //     fullname: function (address) {
+        //         return (this.firstName + " " + this.lastName + " " + address)
+        //     }
+        // }
+        // let obj3 = {
+        //     firstName: "Jaik",
+        //     lastName: "Roy",
+        //     age: 12
+        // }
        
-        let x = obj2.fullname.bind(obj3, "gzb")
-        console.log([x(), obj2.fullname.call(obj3)]);
+        // let x = obj2.fullname.bind(obj3, "gzb")
+        // console.log([x(), obj2.fullname.call(obj3)]);
+
+
+        let h = function(){
+            return this.fname+" "+this.lname
+        }
+        let h1={
+            fname:"ajex",
+            lname:"roy"
+
+        }
+        let h2={
+            fname:"Jaik",
+            lname:"roy"
+
+        }
+        h.call(h2)
+        console.log( h.call(h2));
+       
+        console.log( h.apply(h1));
+
+
+
     </script>
 </body>
 
